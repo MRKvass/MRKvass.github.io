@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Каминский Константин — Портфолио</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;   /* центрируем весь текст */
+  }
+  h1 { margin-bottom: 5px; }
+  h2 { margin-top: 40px; }
+  a { color: #2563eb; }
+
+  /* Список проектов: по центру, но текст внутри слева */
+  ul {
+    display: inline-block;
+    text-align: left;
+  }
+
+  /* ==== ЭКРАН-ЗАСТАВКА ==== */
+  #intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    cursor: pointer;
+  }
+
+  #intro img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 24px;
+  }
+
+  #intro p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2563eb;
+  }
+
+  /* ==== ОСНОВНОЙ КОНТЕНТ ==== */
+  #content {
+    display: none;   /* скрыт, пока не кликнули */
+  }
+</style>
+</head>
+<body>
+
+  <!-- ЗАСТАВКА -->
+  <div id="intro">
+    <img src="kiss.gif" alt="Анимация">
+    <p>Кликни, чтобы узнать обо мне</p>
+  </div>
+
+  <!-- ПОРТФОЛИО -->
+  <div id="content">
+    <h1>Каминский Константин</h1>
+    <p>Студент НИУ ВШЭ 1 курса ПАДИИ</p>
+
+    <h2>Обо мне</h2>
+    <p>Мне 18 лет, бывший олимпиадник. Люблю квас и матан.</p>
+    <p>Знаю: HTML, C++, Python.</p>
+
+    <h2>Проекты</h2>
+    <ul>
+      <li><a href="matan1hse.pdf">Вопросы по матанализу (PDF)</a></li>
+      <li><a href="https://rutube.ru/video/c6cc4d620b1d4338901770a44b3e82f4/">Лендинг агентства — одностраничный сайт. HTML + CSS.</a></li>
+      <li><a href="calculator.exe">Калькулятор на C++</a></li>
+    </ul>
+
+    <h2>Контакты</h2>
+    <p>Почта: <a href="mailto:kvass789@gmail.com">kvass789@gmail.com</a></p>
+    <p>Телеграм: <a href="#">@kvass83</a></p>
+    <p>GitHub: <a href="#">github.com/MRKvass</a></p>
+
+    <hr>
+    <p>© 2026 Каминский Константин</p>
+  </div>
+
+<script>
+  // По клику на заставку — скрываем её и показываем портфолио
+  document.getElementById('intro').addEventListener('click', function () {
+    document.getElementById('intro').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
